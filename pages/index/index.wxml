@@ -1,0 +1,80 @@
+<!--index.wxml-->
+ <view class="banner">
+    <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" vertical="{{false}}" duration="{{duration}}" circular='true'>
+      <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}"  mode="aspectFit" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+<view class='adduserorder'>
+ <button bindtap="clock_in"  class="circle" >
+ <image mode='scaleToFill' src='../../imgs/tab_icon/release.png' plain='true' class='image' ></image>
+ </button>
+ 
+ <button type="handleClicks" bindtap="my_activity" class="circle">
+ <image mode='aspectFill' src='../../imgs/tab_icon/activity.png' plain='true' class='image'></image>
+ </button>
+
+ <button type="handleClicks" bindtap="clock_in" class="circle" >
+ <image mode='aspectFill' src='../../imgs/tab_icon/clock.png' plain='true' class='image'></image>
+ </button>
+</view>
+ 
+<view class='textls'>
+<view class='viewclass'>
+    <text class="red">打卡</text>
+</view>
+<view class='viewclass'>
+    <text class="red">活动</text>
+</view>
+<view class='viewclass'>
+    <text class="red">发布</text>
+</view>
+</view>
+
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+  <!--搜索框-->
+  <view class="search flex-wrp">
+    <view class="search-left flex-item">
+      <image src="../../images/search.png"></image>
+      <input placeholder="搜索热门活动" placeholder-class="search-placeholder" />
+    </view>
+    <!-- <view class="search-right flex-item" bindtap="upper"> -->
+    <view class="search-right flex-item" bindtap="bindAskTap">
+      <!-- <view> -->
+      <image class="ask" src="../../images/ask.png"></image>
+      <text class="ask-text">搜索</text>
+    </view>
+  </view>
+
+  <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+    <view class="feed-item">
+      <view class="feed-content">
+        <!--问题-->
+        <view class="question" bindtap="bindQueTap" data-qid="{{item.id}}">
+          <a class="question-link">
+            <text>{{item.title}}</text>
+          </a>
+        </view>
+        <!--回答-->
+        <view class="answer-body">
+          <view bindtap="bindItemTap" data-hi="WeChat">
+            <text class="answer-txt" aid="{{item.answerVo.id}}">{{item.answerVO.answerContent}}</text>
+          </view>
+          <view class="answer-actions">
+            <view class="comments dot">
+              <a>{{item.answerCount}} 回答 </a>
+            </view>
+            <view class="follow-it">
+              <a>{{item.createdDate}}</a>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>

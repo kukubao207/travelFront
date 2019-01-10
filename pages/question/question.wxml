@@ -1,0 +1,75 @@
+<!--question.wxml-->
+<view class="container">
+    <view class="question-wrp">
+        <view class="question-item">
+            <view class="que-title">
+                {{questionInfo.title}}
+            </view>
+            <view class="que-content">
+                {{questionInfo.content}}
+            </view>
+            <view class="que-follow">
+                <view class="left">
+                    <view class="watch">
+                        <image src="../../images/eye.png"></image>
+                        <text>{{questionInfo.watchedCount}}</text>
+                    </view>
+                    <view class="comment">
+                        <image src="../../images/comment2.png"></image>
+                        <text>{{questionInfo.answerCount}}</text>
+                    </view>
+                </view>
+                <view wx:if="{{!isWatched}}" class="right" bindtap="watchThisQuestion">
+                    关注
+                </view>
+                <view wx:else class="right" bindtap="unWatchThisQuestion">
+                  取消关注
+                </view>
+            </view>
+        </view>
+        <view class="que-operate flex-wrp">
+            <view class="invite flex-item">
+                <image src="../../images/invite.png"></image>
+                <text>邀请回答</text>
+            </view>
+            <view class="write flex-item" bindtap="writeAnswer">
+                <image src="../../images/write.png"></image>
+                <text>写回答</text>
+            </view>
+        </view>
+    </view>
+
+    <block wx:for="{{answerList}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+      <view bindtap="bindItemTap" class="feed-item">
+            <view class="feed-source">
+                <a class="" bindTap="">
+                    <view wx:if="{{item.anoymous}}" class="avatar">
+                      <image src="../../images/anoymous_user.png"></image>
+                      <text>匿名用户</text>
+                    </view>
+                    <view wx:else class="avatar">
+                      <image src="{{item.avatarUrl}}"></image>
+                      <text>{{item.ownerName}}</text>
+                    </view>
+                </a>
+            </view>
+            <view class="feed-content">
+                <view class="answer-body">
+                    <view>
+                        <text class="answer-txt">{{item.answerContent}}</text>
+                    </view>
+                    <view class="answer-actions">
+                        <view class="comments dot">
+                            <a>{{item.commentCount}} 评论 </a>
+                        </view>
+                        <view class="time">
+                            <a>{{item.createdDate}}</a>
+                        </view>
+
+                    </view>
+                </view>
+            </view>
+      </view>
+    </block>
+</view>
+

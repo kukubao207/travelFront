@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/notify/notify",
+    "pages/find/find",
+    "pages/more/more",
+    "pages/answer/answer",
+    "pages/question/question",
+    "pages/writeAnswer/writeAnswer",
+    "pages/do_activity/do_activity",
+    "pages/personalInfo/personalInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff3333",
+    "navigationBarTitleText": "协同出游",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#626567",
+    "selectedColor": "#2A8CE5",
+    "backgroundColor": "#FBFBFB",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_focus.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "",
+        "iconPath": "images/ring.png",
+        "selectedIconPath": "images/ring_focus.png"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "",
+        "iconPath": "images/burger.png",
+        "selectedIconPath": "images/burger_focus.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
