@@ -2,7 +2,6 @@
   "pages": [
     "pages/login/login",
     "pages/reg/reg",
-    "pages/index/index",
     "pages/notify/notify",
     "pages/find/find",
     "pages/more/more",
@@ -12,7 +11,9 @@
     "pages/do_activity/do_activity",
     "pages/personalInfo/personalInfo",
     "pages/moreOrg/moreOrg",
-    "pages/moreAct/moreAct"
+    "pages/moreAct/moreAct",
+    "pages/create_activity/create_activity",
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

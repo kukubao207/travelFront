@@ -4,6 +4,6 @@
   <form bindsubmit="submitNewQuestion">
     <input class='input' placeholder='请输入标题' name="input" bindinput="updateTitle" data-index="0" auto-focus max-lenghth="20"></input>
     <textarea class="textarea" placeholder="添加描述" name="textarea" bindinput="updateDescription" data-index="1" maxlength="1500" />
-    <button class="button" form-type="submit"> 发起活动 </button>
+    <button class="button" form-type="submit"> 打卡 </button>
   </form>
 </view>

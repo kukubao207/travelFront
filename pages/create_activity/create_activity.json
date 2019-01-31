@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "pickerYMDHM": "/components/pickerYMDHM/pickerYMDHM"
+  },
+  "navigationBarTitleText": "创建活动"
+}

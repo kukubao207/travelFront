@@ -1,0 +1,8 @@
+<!--components/pickerYMDHM/pickerYMDHM.wxml-->
+<view>
+  <picker mode="multiSelector" bindchange="pickerChange" bindcolumnchange="pickerColumnChange" bindcancel ="pickerCancel" value="{{pickerIndex}}" range="{{pickerArray}}" range-key="{{'name'}}">
+    <view style='font-size:35rpx;'>
+      {{date}}
+    </view>
+  </picker>
+</view>

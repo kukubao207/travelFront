@@ -1,0 +1,50 @@
+<!--pages/create_activity/create_activity.wxml-->
+<view class="section">
+  <!-- <text class="text">请填写活动信息，带*为必填项</text> -->
+  <form bindsubmit="create_new_activity">
+    <view class="wjq" style="display: flex;">
+      <text class="left">活动名称: </text>
+      <textarea class="right" name="textarea" bindinput="updateTitle" data-index="1" maxlength="1500" />
+    </view>
+    <view class="wjq" style="display: flex;">
+      <text class="left">活动起始时间: </text>
+      <view class="right">
+        <pickerYMDHM bind:onPickerChange="updateStartTime" date="{{startTime}}">
+        </pickerYMDHM>
+      </view>
+    </view>
+    <view class="wjq" style="display: flex;">
+      <text class="left">活动结束时间: </text>
+      <view class="right">
+        <pickerYMDHM bind:onPickerChange="updateEndTime" date="{{endTime}}">
+          </pickerYMDHM>
+      </view>
+    </view>
+    <view class="wjq" style="display: flex;">
+      <text class="left">报名截止时间: </text>
+      <view class="right">
+        <pickerYMDHM bind:onPickerChange="updateEnrollEndTime" date="{{enrollEndTime}}">
+          </pickerYMDHM>
+      </view>
+    </view>
+    <view class="wjq" style="display: flex;">
+      <text class="left">活动进行地点: </text>
+      <textarea class="right" name="textarea" bindinput="updateLocation" data-index="1" maxlength="1500" />
+    </view>
+    <view class="wjq" style="display: flex;">
+      <text class="left">活动人数上限: </text>
+    <textarea class="right"name="textarea" bindinput="updatePersonNumLimit" data-index="1" maxlength="1500" />
+    </view>
+    <view class="wjq" style="display: flex;">
+      <text class="left">活动负责人手机: </text>
+      <textarea class="right"name="textarea" bindinput="updateResponsiblePersonPhoneNum" data-index="1" maxlength="1500" />
+    </view>
+    <view class="wjq" style="display: flex;">
+      <text class="left">活动可得积分: </text>
+      <textarea class="right" name="textarea" bindinput="updateCredit" data-index="1" maxlength="1500" />
+    </view>
+    
+    <textarea class="textarea" placeholder="活动简介" name="textarea" bindinput="updateIntroduction" data-index="1" maxlength="1500" />
+    <button class="button" form-type="submit"> 创建活动 </button>
+  </form>
+</view>
