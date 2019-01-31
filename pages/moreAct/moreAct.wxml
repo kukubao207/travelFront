@@ -1,0 +1,18 @@
+<!--pages/moreOrg/moreOrg.wxml-->
+<view wx:for="{{activities}}" wx:key="{{index}}">
+<view class="cu-card article">
+  <view class="cu-item shadow">
+    <view class="title">{{item.title}}</view>
+    <view class="content">
+      <image src="https://image.weilanwl.com/img/4x3-3.jpg" mode="aspectFill"></image>
+      <view class="desc">
+        <view class='text-content'> {{item.introduction}}</view>
+        <view>
+          <view class='cu-tag bg-white light sm round'>{{item.startTime}}</view>
+          <view class='cu-tag bg-white light sm round'>{{item.location}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+</view>

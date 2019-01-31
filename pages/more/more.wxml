@@ -1,51 +1,65 @@
-
-<view class="container more">
-
-  <view>
-    <view class="user flex-wrp">
-      <view class="avatar flex-item">
-        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      </view>
-      <view class="user-info flex-item" bindtap="bindPersonalInfoTap">
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-        <text class="edit">查看或编辑个人主页</text>
+<view class="cu-card case {{isCard?'no-card':''}}">
+  <view wx:for="{{1}}" wx:key class="cu-item shadow">
+    <view class="cu-list menu menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url(https://image.weilanwl.com/img/square-4.jpg);"></view>
+        <view class='content flex-sub' bindtap="bindPersonalInfoTap">
+          <view class='text-grey'>{{userInfo2.data.nickName}}</view>
+          <view class='text-gray text-sm flex justify-between'>
+            {{userNum}}
+          </view>
+        </view>
       </view>
     </view>
   </view>
+</view>
+
+<view class="cu-bar solid-bottom">
+  <view class='action'>
+    <text class='icon-titles text-orange '></text> 我参加的
+  </view>
+  <view class='action'>
+    <text class='text-grey' bindtap='moreActivities'>更多</text>
+  </view>
+</view>
 
 
+<view class="cu-card article">
+  <view class="cu-item shadow">
+    <view class="title">{{acitvities.title}}</view>
+    <view class="content">
+      <image src="https://image.weilanwl.com/img/4x3-3.jpg" mode="aspectFill"></image>
+      <view class="desc">
+        <view class='text-content'> {{acitvities.introduction}}</view>
+        <view>
+          <view class='cu-tag bg-white light sm round'>{{acitvities.startTime}}</view>
+          <view class='cu-tag bg-white light sm round'>{{acitvities.location}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
 
-  <view class="my">
-    <view class="my-item flex-wrp">
-      <view class="myitem-icon flex-item" >
-        <image src="../../images/eye.png"></image>
-      </view>
-      <view class="myitem-name flex-item">
-        <text>我的关注人</text>
-      </view>
-    </view>
-    <view class="my-item flex-wrp">
-      <view class="myitem-icon flex-item" >
-        <image src="../../images/star.png"></image>
-      </view>
-      <view class="myitem-name flex-item">
-        <text>我的关注问题</text>
-      </view>
-    </view>
-    <view class="my-item flex-wrp">
-      <view class="myitem-icon flex-item" >
-        <image src="../../images/draft.png"></image>
-      </view>
-      <view class="myitem-name flex-item">
-        <text>我的提问</text>
-      </view>
-    </view>
-    <view class="my-item flex-wrp">
-      <view class="myitem-icon flex-item" >
-        <image src="../../images/book.png"></image>
-      </view>
-      <view class="myitem-name flex-item">
-        <text>我的回答</text>
+<view class="cu-bar solid-bottom">
+  <view class='action'>
+    <text class='icon-titles text-orange '></text> 我组织的
+  </view>
+  <view class='action'>
+    <text class='text-grey' bindtap='moreOrginazeActivities'>更多</text>
+  </view>
+</view>
+
+<view class="cu-card article">
+  <view class="cu-item shadow">
+    <view class="title">{{organizeActivities["0"].title}}</view>
+    <view class="content">
+      <image src="https://image.weilanwl.com/img/4x3-3.jpg" mode="aspectFill"></image>
+      <view class="desc">
+        <view class='text-content'> {{organizeActivities["0"].introduction}}</view>
+        <view>
+          <view class='cu-tag bg-white light sm round'>{{organizeActivities["0"].startTime}}</view>
+          <view class='cu-tag bg-white light sm round'>{{organizeActivities["0"].location}}</view>
+        </view>
       </view>
     </view>
   </view>
