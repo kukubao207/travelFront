@@ -11,31 +11,15 @@
 
 <view class='adduserorder'>
   <button type="handleClicks" bindtap="clock_in"  class="circle" >
-    <image mode='scaleToFill' src='../../imgs/tab_icon/release.png' plain='true' class='image' >
-    </image>
+    <text class="text">打卡</text>
   </button>
   <button type="handleClicks" bindtap="my_activity" class="circle">
-    <image mode='aspectFill' src='../../imgs/tab_icon/activity.png' plain='true' class='image'>
-    </image>
+    <text class="text">活动</text>
   </button>
   <button type="handleClicks" bindtap="create_activity" class="circle" >
-    <image mode='aspectFill' src='../../imgs/tab_icon/clock.png' plain='true' class='image'>
-    </image>
+    <text class="text">发布</text>
   </button>
 </view>
- 
-<view class='textls'>
-  <view class='viewclass'>
-      <text class="red">打卡</text>
-  </view>
-  <view class='viewclass'>
-      <text class="red">活动</text>
-  </view>
-  <view class='viewclass'>
-      <text class="red">发布</text>
-  </view>
-</view>
-
 <scroll-view scroll-y="true" class="container" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
   <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
     <view class="feed-item" bindtap="bindQueTap" data-qid="{{item.id}}">

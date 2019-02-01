@@ -81,13 +81,20 @@ swiper-item image {
     width: 100%;
     display: inline-block;
     overflow: hidden;
-}.circle{
- 
+}
+.circle{
     width: 70px;
     height: 70px;
     border: 0 solid #ffffff;
     border-radius: 250px; 
-   font-size:0;
+    font-size:35rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.circle .text {
+  color: red
 }
 .image{
   top: 20rpx;
