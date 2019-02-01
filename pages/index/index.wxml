@@ -47,24 +47,24 @@
           </a>
         </view>
         <!--Body-->
-        <view class="answer-body">
-          <view>
-            <text class="answer-txt">活动简介: {{item.introduction}}</text>
-          </view>
-          <view>
-            <text class="answer-txt">活动时间: {{item.startTime}}-{{item.endTime}}</text>
-          </view>
-          <view>
-            <text class="answer-txt">活动地点: {{item.location}}</text>
-          </view>
-          <!-- <view class="answer-actions">
-            <view class="comments dot">
-              <a>  </a>
+        <view style="display: flex;">
+          <view class="answer-body">
+            <view>
+              <text class="answer-txt">活动简介: {{item.introduction}}</text>
             </view>
-            <view class="follow-it">
-              <a>地点:{{item.location}}</a>
+            <view>
+              <text class="answer-txt">活动时间: {{item.startTime}}到{{item.endTime}}</text>
             </view>
-          </view> -->
+            <view>
+              <text class="answer-txt">活动地点: {{item.location}}</text>
+            </view>
+          </view>
+          <image wx:if="{{item.state==2}}" src = "../../images/baoming.png" class="stateImg">
+          </image>
+          <image wx:elif="{{item.state==0}}" src = "../../images/jinxing.png" class="stateImg">
+          </image>
+          <image wx:elif="{{item.state==1}}" src = "../../images/jieshu.png" class="stateImg">
+          </image>
         </view>
       </view>
     </view>

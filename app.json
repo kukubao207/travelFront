@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/login/login",
     "pages/reg/reg",
     "pages/notify/notify",
@@ -12,7 +13,6 @@
     "pages/moreOrg/moreOrg",
     "pages/moreAct/moreAct",
     "pages/create_activity/create_activity",
-    "pages/index/index",
     "pages/activity_info/activity_info",
     "pages/contactInfo/contactInfo"
   ],

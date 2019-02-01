@@ -6,6 +6,7 @@ Page({
     activityInfo: {},
     activityManInfo: {},
     isRegisterActivity: false,
+    userIcon: "",
   },
   //事件处理函数
   onLoad: function (options) {
@@ -89,7 +90,8 @@ Page({
         util.getData(url).then(res => {
           if(res.data.code === 200){
             that.setData({
-              activityManInfo: res.data.data
+              activityManInfo: res.data.data,
+              userIcon: "http://39.108.186.54:8080" + res.data.data.avatarURL
             })
           }
         })

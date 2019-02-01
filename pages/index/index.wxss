@@ -29,7 +29,13 @@
   color: white;
   line-height: 20rpx;
 }
-
+.stateImg{
+  width: 80rpx;
+  height: 100rpx;
+  padding: 0% 0% 2% 2%;
+  margin: 0% 0% 0% 5%;
+  align-items: center;
+}
 .container .search .search-left image {
   display: inline-block;
   width: 35rpx;
