@@ -1,0 +1,40 @@
+<!--answer.wxml-->
+<view class="container">
+    <view class="question">
+        <text class="question-title">{{activityInfo.title}}</text>
+    </view>
+    <view class="answerer-wrp">
+        <view class="bg-half"></view>
+        <view class="answerer flex-wrp">
+            <view class="avatar flex-item">
+                <image src="../../images/icon1.jpeg"></image>
+            </view>
+            <view class="answerer-info flex-item">
+                <text class="answerer-name">{{activityManInfo.nickName}}</text>
+                <text class="answerer-des">负责人手机号:{{activityInfo.responsiblePersonPhoneNum}}</text>
+            </view>
+            <view wx:if="{{!isRegisterActivity}}" class="follow flex-item" bindtap="registerActivity" data-activityId="{{activityInfo.id}}">
+              <text>十 报名</text>
+            </view>
+            <view wx:else class="follow flex-item">
+              <text>已报名</text>
+            </view>
+        </view>
+    </view>
+    <view class="answer-content">
+        <text>活动简要介绍:  {{activityInfo.introduction}}
+        活动起始时间:  {{activityInfo.startTime}}
+        活动截止时间:  {{activityInfo.endTime}}
+        报名截止时间:  {{activityInfo.enrollEndTime}}
+        活动进行地点:  {{activityInfo.location}}
+        当前报名人数:  {{activityInfo.personNumCur}}
+        活动人数上限:  {{activityInfo.personNumLimit}}
+        活动可得积分:  {{activityInfo.credit}}
+        活动其他说明:  {{activityInfo.other}}
+        </text>
+        <image src="../../images/1444983318907-_DSC1826.jpg"></image>
+        <image src="../../images/1444983318907-_DSC1826.jpg"></image>
+    </view>
+
+</view>
+

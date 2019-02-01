@@ -101,8 +101,8 @@ Page({
     let user = wx.getStorageSync('user');
     let jsonData = {
       "credit": this.data.credit,
-      "endTime": this.data.endTime + " 00:00:00",
-      "enrollEndTime": this.data.enrollEndTime + " 00:00:00",
+      "endTime": this.data.endTime + ":00",
+      "enrollEndTime": this.data.enrollEndTime + ":00",
       "id": this.data.id,
       "introduction": this.data.introduction,
       "location": this.data.location,
@@ -110,7 +110,7 @@ Page({
       "personNumCur": this.data.personNumCur,
       "personNumLimit": this.data.personNumLimit,
       "responsiblePersonPhoneNum": this.data.responsiblePersonPhoneNum,
-      "startTime": this.data.startTime + " 00:00:00",
+      "startTime": this.data.startTime + ":00",
       "state": this.data.state,
       "stuNum": this.data.stuNum,
       "title": this.data.title

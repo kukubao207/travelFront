@@ -1,20 +1,23 @@
-/**answer.wxss**/
-
 .container {
     padding: 0;
     font-size: 14rpx;
     background: #F0F4F3;
     color: #000;
 }
-
 .question {
     position: relative;
-    width: 650rpx;
+    width: 100%;
     padding: 40rpx 50rpx 30rpx;
     background: #f95f5f;
     color: #fff;
     font-size: 38rpx;
     line-height: 48rpx;
+}
+.answerer.flex-wrp{
+    position: relative;
+    width: 90%;
+    height: 150rpx;
+    background: #fff;
 }
 .answerer-wrp{
     position: relative;
@@ -45,7 +48,6 @@
     width: 90rpx;
     height: 90rpx;
 }
-
 .answerer .avatar image {
     display: inline-block;
     width: 90rpx;
@@ -84,6 +86,7 @@
 .answer-content{
     padding: 30rpx 40rpx;
     background: #ffffff;
+    width: 100%
 }
 .answer-content text{
     font-size: 32rpx;

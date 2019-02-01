@@ -40,11 +40,12 @@ Page({
       url: '/pages/create_activity/create_activity',
     })
   },
-  //跳转到问题页
+  //跳转到活动详情
   bindQueTap: function (e) {
     let qid = e.currentTarget.dataset.qid;
+    console.log(qid)
     wx.navigateTo({
-      url: '../question/question?id=' + qid
+      url: '../activity_info/activity_info?activityId=' + qid
     })
   },
   //跳转到提问页

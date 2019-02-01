@@ -5,7 +5,6 @@
     "pages/notify/notify",
     "pages/find/find",
     "pages/more/more",
-    "pages/answer/answer",
     "pages/question/question",
     "pages/writeAnswer/writeAnswer",
     "pages/do_activity/do_activity",
@@ -13,7 +12,8 @@
     "pages/moreOrg/moreOrg",
     "pages/moreAct/moreAct",
     "pages/create_activity/create_activity",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/activity_info/activity_info"
   ],
   "window": {
     "backgroundTextStyle": "light",
