@@ -20,10 +20,11 @@ Page({
     let that = this;
     let user = wx.getStorageSync('user');
     let stuNum = user.userNum;
+    console.log(stuNum)
     let url = 'user/getActivityInfo/'+stuNum + '/'+this.data.activityId;
     util.getData(url).then(res=>{
       console.log(res);
-      if(res.data===null){
+      if(res.data.data===null){
         that.setData({
           isRegisterActivity:false
         })
@@ -66,6 +67,16 @@ Page({
       }
     })
   },
+  bindPersonalInfoTap: function () {
+    var contacts = {
+      userNum: this.data.activityManInfo.stuNum
+    }
+    wx.setStorageSync('contacts', contacts)
+    wx.navigateTo({
+      url: '../contactInfo/contactInfo'
+    })
+  },
+
   getActivityInfo: function() {
     let that = this;
     let url = '/activity/activityInfo/'+ this.data.activityId;

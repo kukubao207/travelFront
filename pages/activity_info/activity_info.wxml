@@ -7,7 +7,7 @@
         <view class="bg-half"></view>
         <view class="answerer flex-wrp">
             <view class="avatar flex-item">
-                <image src="../../images/icon1.jpeg"></image>
+                <image src="../../images/icon1.jpeg" bindtap="bindPersonalInfoTap"></image>
             </view>
             <view class="answerer-info flex-item">
                 <text class="answerer-name">{{activityManInfo.nickName}}</text>

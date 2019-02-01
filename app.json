@@ -13,7 +13,8 @@
     "pages/moreAct/moreAct",
     "pages/create_activity/create_activity",
     "pages/index/index",
-    "pages/activity_info/activity_info"
+    "pages/activity_info/activity_info",
+    "pages/contactInfo/contactInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",

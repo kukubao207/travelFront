@@ -7,77 +7,98 @@
 <scroll-view scroll-y="true" class="container notify withtab" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
   <view class="ctnt0" hidden="{{currentNavtab==0 ? '' : true}}">
     <view class="unread">
-      <text>0 条未读</text>
+      <text>热门活动</text>
       <image src="../../images/allread.png"></image>
     </view>
-    <view class="notify-item flex-wrp">
-      <view class="avatar flex-item">
-        <image src="../../images/icon1.jpeg"></image>
-      </view>
-      <view class="notify-content flex-item">
-        <text class="notify-source">Rebecca  回答了问题</text>
-        <text class="notify-title">C#如何在不覆盖原有文件的情况下直接修改某一部分的内容？</text>
-      </view>
-    </view>
-    <view class="notify-item flex-wrp">
-      <view class="avatar flex-item">
-        <image src="../../images/icon1.jpeg"></image>
-      </view>
-      <view class="notify-content flex-item">
-        <text class="notify-source">Rebecca  回答了问题</text>
-        <text class="notify-title">C#如何在不覆盖原有文件的情况下直接修改某一部分的内容？</text>
-      </view>
-    </view>
-    <view class="notify-item flex-wrp">
-      <view class="avatar flex-item">
-        <image src="../../images/icon1.jpeg"></image>
-      </view>
-      <view class="notify-content flex-item">
-        <text class="notify-source">Rebecca  回答了问题</text>
-        <text class="notify-title">C#如何在不覆盖原有文件的情况下直接修改某一部分的内容？</text>
+<scroll-view scroll-y="true" class="container" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+    <view class="feed-item" bindtap="bindQueTap" data-qid="{{item.id}}">
+      <view class="feed-content">
+        <!--Title-->
+        <view class="question">
+          <a class="question-link">
+            <text>{{item.title}}</text>
+          </a>
+        </view>
+        <!--Body-->
+        <view class="answer-body">
+          <view>
+            <text class="answer-txt">活动简介: {{item.introduction}}</text>
+          </view>
+          <view>
+            <text class="answer-txt">活动时间: {{item.startTime}}-{{item.endTime}}</text>
+          </view>
+          <view>
+            <text class="answer-txt">活动地点: {{item.location}}</text>
+          </view>
+        </view>
       </view>
     </view>
-    <view class="notify-item flex-wrp">
-      <view class="avatar flex-item">
-        <image src="../../images/icon1.jpeg"></image>
-      </view>
-      <view class="notify-content flex-item">
-        <text class="notify-source">Rebecca  回答了问题</text>
-        <text class="notify-title">C#如何在不覆盖原有文件的情况下直接修改某一部分的内容？</text>
-      </view>
-    </view>
-    <view class="notify-item flex-wrp">
-      <view class="avatar flex-item">
-        <image src="../../images/icon1.jpeg"></image>
-      </view>
-      <view class="notify-content flex-item">
-        <text class="notify-source">Rebecca  回答了问题</text>
-        <text class="notify-title">C#如何在不覆盖原有文件的情况下直接修改某一部分的内容？</text>
-      </view>
-    </view>
-    <view class="notify-item flex-wrp">
-      <view class="avatar flex-item">
-        <image src="../../images/icon1.jpeg"></image>
-      </view>
-      <view class="notify-content flex-item">
-        <text class="notify-source">Rebecca  回答了问题</text>
-        <text class="notify-title">C#如何在不覆盖原有文件的情况下直接修改某一部分的内容？</text>
-      </view>
-    </view>
-    <view class="notify-item flex-wrp">
-      <view class="avatar flex-item">
-        <image src="../../images/icon1.jpeg"></image>
-      </view>
-      <view class="notify-content flex-item">
-        <text class="notify-source">Rebecca  回答了问题</text>
-        <text class="notify-title">C#如何在不覆盖原有文件的情况下直接修改某一部分的内容？</text>
-      </view>
-    </view>
+  </block>
+</scroll-view>
   </view>
-  <view class="ctnt1 placehold" hidden="{{currentNavtab==1 ? '' : true}}">
-    <text>赞与感谢</text>
+  <view class="ctnt0" hidden="{{currentNavtab==1 ? '' : true}}">
+        <view class="unread">
+      <text>热门活动</text>
+      <image src="../../images/allread.png"></image>
+    </view>
+<scroll-view scroll-y="true" class="container" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+    <view class="feed-item" bindtap="bindQueTap" data-qid="{{item.id}}">
+      <view class="feed-content">
+        <!--Title-->
+        <view class="question">
+          <a class="question-link">
+            <text>{{item.title}}</text>
+          </a>
+        </view>
+        <!--Body-->
+        <view class="answer-body">
+          <view>
+            <text class="answer-txt">活动简介: {{item.introduction}}</text>
+          </view>
+          <view>
+            <text class="answer-txt">活动时间: {{item.startTime}}-{{item.endTime}}</text>
+          </view>
+          <view>
+            <text class="answer-txt">活动地点: {{item.location}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
   </view>
-  <view class="ctnt2 placehold" hidden="{{currentNavtab==2 ? '' : true}}">
-    <text>关注</text>
+  <view class="ctnt0" hidden="{{currentNavtab==2 ? '' : true}}">
+        <view class="unread">
+      <text>热门活动</text>
+      <image src="../../images/allread.png"></image>
+    </view>
+<scroll-view scroll-y="true" class="container" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+    <view class="feed-item" bindtap="bindQueTap" data-qid="{{item.id}}">
+      <view class="feed-content">
+        <!--Title-->
+        <view class="question">
+          <a class="question-link">
+            <text>{{item.title}}</text>
+          </a>
+        </view>
+        <!--Body-->
+        <view class="answer-body">
+          <view>
+            <text class="answer-txt">活动简介: {{item.introduction}}</text>
+          </view>
+          <view>
+            <text class="answer-txt">活动时间: {{item.startTime}}-{{item.endTime}}</text>
+          </view>
+          <view>
+            <text class="answer-txt">活动地点: {{item.location}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
   </view>
 </scroll-view>

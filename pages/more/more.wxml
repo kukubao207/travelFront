@@ -2,8 +2,8 @@
   <view wx:for="{{1}}" wx:key class="cu-item shadow">
     <view class="cu-list menu menu-avatar">
       <view class="cu-item">
-        <view class="cu-avatar round lg" style="background-image:url(https://image.weilanwl.com/img/square-4.jpg);"></view>
-        <view class='content flex-sub' bindtap="bindPersonalInfoTap">
+        <view class="cu-avatar round lg" style="background-image:url(https://image.weilanwl.com/img/square-4.jpg);" bindtap="bindPersonalInfoTap"></view>
+        <view class='content flex-sub'>
           <view class='text-grey'>{{userInfo2.data.nickName}}</view>
           <view class='text-gray text-sm flex justify-between'>
             {{userNum}}

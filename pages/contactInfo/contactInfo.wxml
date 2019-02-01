@@ -1,0 +1,48 @@
+<!--pages/personalInfo/personalInfo.wxml-->
+<view class='content'>
+  <view class="cu-list menu">
+    <view class="cu-item">
+      <view class='content'>
+        <text class='text-grey'>性别</text>
+      </view>
+      <view class='action'>
+        <text class='text-black' wx:if="{{userInfo.gender}}">男</text>
+        <text class='text-black' wx:else>女</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class='content'>
+        <text class='text-grey'>学号</text>
+      </view>
+      <view class='action'>
+        <text class='text-black'>{{userNum}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class='content'>
+        <text class='text-grey'>昵称</text>
+      </view>
+      <view class='action'>
+        <text class='text-black'>{{userInfo.data.nickName}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class='content'>
+        <text class='text-grey'>手机号</text>
+      </view>
+      <view class='action'>
+        <text class='text-black'>{{userInfo.data.phoneNum}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class='content'>
+        <text class='text-grey'>我的积分</text>
+      </view>
+      <view class='action'>
+        <text class='text-black'>{{userInfo.data.credit}}</text>
+      </view>
+    </view>
+
+  </view>
+
+</view>

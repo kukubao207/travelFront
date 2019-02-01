@@ -18,11 +18,11 @@
         <text class='text-black'>{{userNum}}</text>
       </view>
     </view>
-    <view class="cu-item arrow">
+    <view class="cu-item arrow" bindtap="showModal" data-target="DialogModal1">
       <view class='content'>
         <text class='text-grey'>昵称</text>
       </view>
-      <view class='action' bindtap="showModal" data-target="DialogModal1">
+      <view class='action'>
         <text class='text-black'>{{userInfo2.data.nickName}}</text>
       </view>
     </view>
@@ -38,12 +38,12 @@
         </view>
         <!-- <form bindsubmit="formSubmit"> -->
           <view class='padding-xl'>
-            <input placeholder="{{userInfo2.data.nickName}} " class='radius' name='newnickName'></input>
+            <input value="{{userInfo2.data.nickName}}" class='radius' name='newnickName'></input>
           </view>
           <view class="cu-bar justify-end">
             <view class='action'>
-              <button class='cu-btn line-green text-green' bindtap='hideModal'>取消</button>
-              <button class='cu-btn bg-green margin-left' form-type='submit'>确定</button> 
+              <button class='cu-btn line-red text-red' bindtap='hideModal'>取消</button>
+              <button class='cu-btn bg-red margin-left' form-type='submit'>确定</button> 
             </view>
         <!-- </form> -->
 
